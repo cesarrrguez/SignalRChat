@@ -8,7 +8,10 @@ document.getElementById("sendButton").disabled = true;
 // Receive message
 connection.on("ReceiveMessage", function (user, message) {
     var msg = message.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    var encodedMsg = "<strong>" + user + ":</strong> " + msg;
+
+    var today = new Date();
+    var time = today.getHours() + ":" + today.getMinutes();
+    var encodedMsg = time + " <strong>" + user + ":</strong> " + msg;
 
     var li = document.createElement("li");
     li.innerHTML = encodedMsg;
