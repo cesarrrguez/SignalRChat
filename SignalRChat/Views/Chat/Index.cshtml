@@ -4,25 +4,16 @@
 <h1>Chat messages</h1>
 
 <div class="container">
-    <div class="row">
-        <div class="col-2">Message</div>
-        <div class="col-4"><input type="text" id="messageInput" /></div>
-    </div>
-    <div class="row">&nbsp;</div>
-    <div class="row">
-        <div class="col-6">
-            <input type="button" id="sendButton" value="Send Message" />
+    <div id="messages"></div>
+
+    <hr />
+
+    <div class="input-group mb-3">
+        <input type="text" id="messageInput" class="form-control" placeholder="Send message" />
+
+        <div class="input-group-append">
+            <button type="submit" id="sendButton" class="btn btn-primary">Send</button>
         </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col-12">
-        <hr />
-    </div>
-</div>
-<div class="row">
-    <div class="col-6">
-        <ul id="messagesList"></ul>
     </div>
 </div>
 

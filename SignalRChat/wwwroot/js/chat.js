@@ -11,11 +11,11 @@ connection.on("ReceiveMessage", function (user, message) {
 
     var today = new Date();
     var time = today.getHours() + ":" + today.getMinutes();
-    var encodedMsg = time + " <strong>" + user + ":</strong> " + msg;
+    var encodedMsg = "<p><strong>" + user + "</strong> <span class='messageTime'>" + time + "</span></p><p>" + msg + "</p>";
 
-    var li = document.createElement("li");
-    li.innerHTML = encodedMsg;
-    document.getElementById("messagesList").appendChild(li);
+    var element = document.createElement("div");
+    element.innerHTML = encodedMsg;
+    document.getElementById("messages").appendChild(element);
 });
 
 // Chat hub connection established
