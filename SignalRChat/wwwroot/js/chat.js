@@ -29,5 +29,7 @@ document.getElementById("sendButton").addEventListener("click", function (event)
         });
     }
 
+    document.getElementById("messageInput").value = "";
+
     event.preventDefault();
 });
