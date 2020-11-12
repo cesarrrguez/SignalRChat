@@ -33,3 +33,10 @@ document.getElementById("sendButton").addEventListener("click", function (event)
 
     event.preventDefault();
 });
+
+document.getElementById("messageInput").addEventListener("keyup", function (event) {
+    if (event.keyCode === 13) {
+        document.getElementById("sendButton").click();
+    }
+    event.preventDefault();
+});
